@@ -1,0 +1,16 @@
+INSERT INTO comuna(codigo_comuna,nombre_comuna)VALUES
+('15101', 'Arica'),
+('15102', 'Camarones'),
+('09101' ,'Temuco'),
+('09102', 'Carahue'),
+('09103','Cunco'),
+('09104', 'Curarrehue'),
+('09105',
+'Freire'),
+('09106' ,'Galvarino'),
+('09107', 'Gorbea'),
+('09108', 'Lautaro'),
+('09109', 'Loncoche'),
+('09110', 'Melipeuco'),
+('09111', 'Nueva Imperial'),
+('09112', 'Padre Las Casas');
