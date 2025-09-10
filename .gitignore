@@ -2,3 +2,4 @@ modelo/__pycache__/autor.cpython-313.pyc
 modelo/__pycache__/nacionalidad.cpython-313.pyc
 alchemy/data/__pycache__/conexion.cpython-313.pyc
 alchemy/modelo/__pycache__/comuna.cpython-313.pyc
+alchemy/negocio/__pycache__/negocio_comuna.cpython-313.pyc
