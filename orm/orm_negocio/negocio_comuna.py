@@ -1,5 +1,5 @@
-from data.conexion import Session
-from modelo.comuna import Comuna
+from orm_data.conexion import Session
+from orm_modelo.comuna import Comuna
 from sqlalchemy import func
 
 from prettytable import PrettyTable
@@ -11,8 +11,10 @@ def crear_comuna():
     mensaje = ''
     nueva_comuna = Comuna()
 
-    nueva_comuna.codigo_comuna = input('Ingrese código de comuna: ')
-    nueva_comuna.nombre_comuna = input('Ingrese nombre de comuna: ')
+    nueva_comuna.codigo_comuna = input(  # type: ignore
+        'Ingrese código de comuna: ')
+    nueva_comuna.nombre_comuna = input(  # type: ignore
+        'Ingrese nombre de comuna: ')
 
     sesion.add(nueva_comuna)
     try:
@@ -36,9 +38,9 @@ def listado_comunas():
     print(table)
 
 
-def buscar_comuna(nombre_comuna):
+def buscar_comuna(buscar_comuna: str):
     comuna = sesion.query(Comuna).filter_by(
-        nombre_comuna=nombre_comuna).first()
+        nombre_comuna=buscar_comuna.title()).first()
     if comuna:
         return comuna
 
@@ -54,11 +56,11 @@ def actualizar_comuna():
         nuevo_codigo_comuna = input(
             'Ingrese código comuna (ENTER para NO modificar): ')
         if nuevo_codigo_comuna != '':
-            comuna_editar.codigo_comuna = nuevo_codigo_comuna
+            comuna_editar.codigo_comuna = nuevo_codigo_comuna  # type: ignore
         nuevo_nombre_comuna = input(
             'Ingrese nombre comuna (ENTER para NO modificar): ')
         if nuevo_nombre_comuna != '':
-            comuna_editar.nombre_comuna = nuevo_nombre_comuna
+            comuna_editar.nombre_comuna = nuevo_nombre_comuna  # type: ignore
 
         try:
             sesion.commit()

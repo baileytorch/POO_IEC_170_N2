@@ -1,11 +1,8 @@
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from orm_modelo.base import BaseModel
 
 
-class Comuna(Base):
-    __tablename__ = 'comuna'
+class Comuna(BaseModel):
     id_comuna = Column(Integer, primary_key=True)
     codigo_comuna = Column(String(5))
     nombre_comuna = Column(String(50))
