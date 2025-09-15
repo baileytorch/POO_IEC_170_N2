@@ -3,3 +3,9 @@ modelo/__pycache__/nacionalidad.cpython-313.pyc
 alchemy/data/__pycache__/conexion.cpython-313.pyc
 alchemy/modelo/__pycache__/comuna.cpython-313.pyc
 alchemy/negocio/__pycache__/negocio_comuna.cpython-313.pyc
+orm/orm_data/__pycache__/conexion.cpython-313.pyc
+orm/orm_modelo/__pycache__/base.cpython-313.pyc
+orm/orm_modelo/__pycache__/comuna.cpython-313.pyc
+orm/orm_modelo/__pycache__/direccion.cpython-313.pyc
+orm/orm_negocio/__pycache__/negocio_comuna.cpython-313.pyc
+orm/orm_negocio/__pycache__/negocio_direccion.cpython-313.pyc
